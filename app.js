@@ -18,6 +18,8 @@ async function init() {
     console.log("Initializing new team!");
     do {
         try {
+
+
             console.log(`TeamBuilder has begun initialization`)
             console.log(`------------------------------------`)
             const employee = await newMember()
@@ -27,6 +29,7 @@ async function init() {
             let id = employee.id
             let email = employee.email
             let role = employee.role
+
             switch (role) {
                 case "Intern":
                     dataInput = await findSchool();
@@ -47,11 +50,16 @@ async function init() {
                     teamArray.push(manData)
                     break;
             }
+
         } catch (err) {
             console.log(err)
         }
+
         i = await nextEmployee()
+
     } while (i.nextEmployee === "Yes")
+
+
     try {
         let startHtml = genHtml();
         let endHtml =
@@ -69,13 +77,6 @@ async function init() {
                 console.log("Success!")
             }
         })
-        // await fs.appendFile(`./output/${teamName.team}.html`, endHtml, function (err) {
-        //     if (err) {
-        //         console.log(err)
-        //     } else {
-        //         console.log("TeamBuilder Built!")
-        //     }
-        // })
     } catch (err) {
         console.log(err)
     }

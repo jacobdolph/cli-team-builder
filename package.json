@@ -1,7 +1,7 @@
 {
   "name": "cli-team-builder",
   "version": "1.0.0",
-  "description": "",
+  "description": "​\r ## Overview\r ​\r The purpose of this application is to dynamically generate a graphic with a teams personell portfolio.\r ​\r ### Gallery\r ​\r End Result\r ![Team Builder Page](./assets/images/TeamBuilderTemplate.png \"Teambuilder page\")\r ​\r The Process\r ![Command Line Visual](./assets/images/Team-builder.gif \"Command Line Process\")\r ​\r ​\r ### Problem\r ​\r A manager\r wants to generate a webpage that displays their team's basic info\r so that they have quick access to emails and GitHub profiles.",
   "main": "app.js",
   "directories": {
     "lib": "lib",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/stevetrilogy/unit10hw#readme",
   "dependencies": {
     "fs": "0.0.1-security",
-    "inquirer": "^6.3.1"
+    "inquirer": "^6.5.2"
   },
   "devDependencies": {
     "jest": "^24.8.0"

@@ -2,47 +2,49 @@
 ​
 ## Overview
 ​
-The purpose of this application is to ...
+The purpose of this application is to dynamically generate a graphic with a teams personell portfolio.
 ​
 ### Gallery
 ​
 End Result
-![Team Builder Page](.assets/images/TeamBuilderTemplate.png "Teambuilder page")
+![Team Builder Page](./assets/images/TeamBuilderTemplate.png "Teambuilder page")
 ​
 The Process
-![Command Line Visual](https://drive.google.com/file/d/115FwkuTvisY9fhF-wGyXsgP9FwVg5Kl8/preview "Command Line Process")
+![Command Line Visual](./assets/images/Team-builder.gif "Command Line Process")
 ​
 ​
 ### Problem
 ​
-Currently ...
+A manager
+wants to generate a webpage that displays their team's basic info
+so that they have quick access to emails and GitHub profiles.
+
 ​
 ### Solution
 ​
-My solution will ...
+I will create a command line application that will request information about each team member and dynamically generate an html that displays a visually apealing list of the team members.
 ​
 ## Tech and Features Used
 ​
 * Bootstrap
 * Javascript
-* Library API
+* Node.js
+* Node Librarys:
+Inquirer - Util
+* HTML
 ​
 ## How to use
 ​
-Instrunctions on how to use if needed.
+* Clone this repo
+* Navigate to the folder this was cloned to and run npm i.
+* run 'node app.js' in the command line
+* type in each team members name and additional information as the application prompts.
+* at the end it will ask for your team name, this name with be the name of the file that the application creates.
+* in the folder of this cloned repor there is a folder called output. This is where you will find the html with your team name.
 ​
 ## Technical Overview
 ​
-1. The main component (PullMultiple) contains an array of the user ID's from the users input.
-2. That component has a generator function that iterates over the array and adds the ID #'s one by one to an array to be processed.
-3. For every ID # in the array to be processed, a "DataGatherer" component is created.
-4. This DataGatherer component fires off all of the api calls and renders the progress to the screen.
-5. These API calls are called in an asynchronous fashion in order to reduce strain on the server handling the queries.
-6. As the API calls are being made, links to the finished .csv files are being saved to state.
-7. The download button downloads several links at once from the saved links in state.
-8. When all API calls have finished for an ID, the next iterator of the generator function is fired and the next ID goes through it's gathering phase.
-9. The reset button cancels all API calls and bring highest component back to empty.
-​
-Link to example readme:
-​
-https://github.com/IzzleNizzle/ReadoutAssistant
+1. There are severel components to this application that are very important.
+Inquirer, Node, and the npm library, classes and extends to sub classes.
+2. Inquirer allowys me to create command line prompts that saves the information I am collecting to an array. Because I am saving it to an array and not local storage or a database, that array clears as the application closes.
+3. The app started with one Class called employee, and then there are sub classes, Intern, Manager and Engineer that employee extends to.
